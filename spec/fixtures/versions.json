@@ -1,0 +1,14 @@
+{
+  "appName": "Base",
+  "versions": {
+    "2018-01-01": {
+      "testAlias": "foo"
+    },
+    "2018-02-01": {
+      "testAlias": "bar"
+    },
+    "2018-03-01": {
+      "default": "baz"
+    }
+  }
+}

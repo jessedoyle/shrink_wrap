@@ -1,0 +1,11 @@
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+Documentation:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
