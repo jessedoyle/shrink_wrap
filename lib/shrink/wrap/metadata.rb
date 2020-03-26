@@ -40,7 +40,12 @@ module Shrink
           next if value.nil?
 
           coercion = coercions[property]
-          memo[property] = coercion&.coerce(value) || value
+
+          memo[property] = if coercion
+                             coercion.coerce(value)
+                           else
+                             value
+                           end
         end
       end
 
