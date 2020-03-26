@@ -48,14 +48,28 @@ describe Shrink::Wrap::Metadata do
   end
 
   describe 'coerce' do
-    let(:input) { { number: 1 } }
+    context 'with numbers' do
+      let(:input) { { number: 1 } }
 
-    before(:each) do
-      subject.add_coercion(:number, ->(v) { v + 1 })
+      before(:each) do
+        subject.add_coercion(:number, ->(v) { v + 1 })
+      end
+
+      it 'coerces the input' do
+        expect(subject.coerce(input)).to eq(number: 2)
+      end
     end
 
-    it 'coerces the input' do
-      expect(subject.coerce(input)).to eq(number: 2)
+    context 'when coercing strings to boolean' do
+      let(:input) { { boolean: 'false' } }
+
+      before(:each) do
+        subject.add_coercion(:boolean, ->(v) { v.to_s.casecmp('true').zero? })
+      end
+
+      it 'returns the coerced boolean value' do
+        expect(subject.coerce(input)).to eq(boolean: false)
+      end
     end
   end
 end
