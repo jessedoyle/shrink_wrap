@@ -50,12 +50,21 @@ describe Shrink::Wrap::Transformer::CollectionFromKey do
 
         context 'when the from value is a hash' do
           context 'when the child elements are not hashes' do
-            let(:hash) { { names: { a: 1, b: 2 } } }
+            let(:hash) do
+              {
+                names: {
+                  one: 'test_one',
+                  two: 'test_two'
+                }
+              }
+            end
 
-            it 'raises ArgumentError' do
-              expect { subject.transform(hash) }.to raise_error(
-                ArgumentError,
-                'expected Hash, got: 1'
+            it 'returns an array with hash elements' do
+              expect(subject.transform(hash)).to eq(
+                names: [
+                  { name: :one, value: 'test_one' },
+                  { name: :two, value: 'test_two' }
+                ]
               )
             end
           end
