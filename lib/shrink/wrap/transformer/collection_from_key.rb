@@ -28,8 +28,11 @@ module Shrink
 
         def map(data, to)
           data.map do |key, value|
-            ensure_type!(Hash, value)
-            value.merge(to => key)
+            if value.is_a?(Hash)
+              value.merge(to => key)
+            else
+              { to => key, value: value }
+            end
           end
         end
 
