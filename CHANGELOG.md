@@ -2,7 +2,8 @@
 
 * **breaking change**: Modify the `CollectionFromKey` transformer to map non-hash values into a hash with a `value` property.
 
-i.e. ```ruby
+i.e.
+```ruby
 input = { names: { john: 'foo', jane: 'bar' } }
 transformer.transform(input) #=>  { names: [{ name: :john, value: 'foo' }, { name: :jane, value: 'bar' }] }
 ```
