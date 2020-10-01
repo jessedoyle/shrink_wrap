@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
       .reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   spec.require_paths = ['lib']
+  spec.required_ruby_version = '>= 2.5.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'pry'
