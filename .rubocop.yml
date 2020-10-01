@@ -9,3 +9,5 @@ Documentation:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+Style/IfUnlessModifier:
+  Enabled: false

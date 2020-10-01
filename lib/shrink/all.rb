@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'pp'
+require 'stringio'
 require_relative 'wrap/version'
 require_relative 'wrap/metadata'
 require_relative 'wrap/support/type_check'
