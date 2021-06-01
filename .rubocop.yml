@@ -1,5 +1,7 @@
 AllCops:
   DisplayCopNames: true
+  NewCops: enable
+  SuggestExtensions: false
   TargetRubyVersion: 2.5
   Exclude:
     - 'bin/**/*'
@@ -10,4 +12,6 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 Style/IfUnlessModifier:
+  Enabled: false
+Style/RedundantFetchBlock:
   Enabled: false

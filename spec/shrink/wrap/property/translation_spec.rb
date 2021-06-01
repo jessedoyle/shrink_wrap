@@ -64,6 +64,15 @@ describe Shrink::Wrap::Property::Translation do
               expect(subject.translate(input)).to eq(default.call)
             end
           end
+
+          context 'when the value is nil' do
+            let(:default) { -> { true } }
+            let(:input) { { key: nil } }
+
+            it 'returns the default value' do
+              expect(subject.translate(input)).to eq(default.call)
+            end
+          end
         end
       end
     end

@@ -32,7 +32,7 @@ module Shrink
           return opts.fetch(from) { key_error!(opts) } if default.nil?
 
           ensure_callable!(default, 0)
-          opts.fetch(from) { default.call }
+          opts[from] || default.call
         end
 
         def key_error!(opts)
