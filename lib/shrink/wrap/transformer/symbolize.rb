@@ -12,6 +12,7 @@ module Shrink
 
         private
 
+        # rubocop:disable Style/OptionalBooleanParameter
         def symbolize(element, depth, symbolize_singular = false)
           return element if depth > options.fetch(:depth) { DEFAULT_DEPTH }
 
@@ -24,6 +25,7 @@ module Shrink
             symbolize_singular ? to_sym(element) : element
           end
         end
+        # rubocop:enable Style/OptionalBooleanParameter
 
         def symbolize_enumerable(array, depth)
           array.map { |i| symbolize(i, depth) }

@@ -26,8 +26,8 @@ module Shrink
       def translate(data)
         return data if translate_all
 
-        translations.each_with_object({}) do |(key, translation), memo|
-          memo[key] = translation.translate(data)
+        translations.transform_values do |translation|
+          translation.translate(data)
         end
       end
 
