@@ -1,3 +1,7 @@
+# 1.0.1 - June 1, 2021
+
+* Translation properties that define a `default` option now correctly call resolve the default value when the input value is explicitly `nil`. See [#7](https://github.com/jessedoyle/shrink_wrap/pull/7).
+
 # 1.0.0 - Oct 1, 2020
 
 * Explicity require `stringio` from the standard library as it is used for some error messages.
