@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['Jesse Doyle']
   spec.email = ['jdoyle@ualberta.ca']
   spec.summary = 'Transform complex JSON data into custom Ruby objects'
-  spec.description = 'Shrink::Wrap is a dead-simple framework to manipulate' \
-                     ' and map JSON data to Ruby object instances.'
+  spec.description = 'Shrink::Wrap is a dead-simple framework to manipulate ' \
+                     'and map JSON data to Ruby object instances.'
   spec.homepage = 'https://github.com/jessedoyle/shrink_wrap'
   spec.license = 'MIT'
 
@@ -29,4 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'simplecov'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end
