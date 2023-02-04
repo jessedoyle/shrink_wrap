@@ -1,3 +1,7 @@
+# 1.0.2 - Feb 3, 2023
+
+* Fix an issue with the `shrink_wrap` require statement. [#8], Thanks @mvandenbeuken!
+
 # 1.0.1 - June 1, 2021
 
 * Translation properties that define a `default` option now correctly call resolve the default value when the input value is explicitly `nil`. See [#7](https://github.com/jessedoyle/shrink_wrap/pull/7).

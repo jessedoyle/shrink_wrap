@@ -8,6 +8,11 @@ AllCops:
     - 'vendor/**/*'
 Documentation:
   Enabled: false
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+Lint/RedundantRequireStatement:
+  Exclude:
+    - lib/shrink/all.rb
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
